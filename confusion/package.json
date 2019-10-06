@@ -1,0 +1,12 @@
+{
+  "name": "confusion",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "lite-server": "^2.5.4",
+    "react-native-scripts": "2.0.1"
+  },
+  "dependencies": {
+    "react-native-elements": "^1.0.0-beta8"
+  }
+}
