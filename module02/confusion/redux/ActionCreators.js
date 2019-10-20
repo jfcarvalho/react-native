@@ -87,59 +87,68 @@ export const fetchComments = () => (dispatch) => {
                         .catch(error => dispatch(leadersFailed(error.message)))
                 }
                  
-    export const commentsFailed = (errmess) => ({
+export const commentsFailed = (errmess) => ({
         type: ActionTypes.COMMENTS_FAILED,
         payload: errmess
     });
 
-    export const addComments = (comments) => ({
+export const addComments = (comments) => ({
         type: ActionTypes.ADD_COMMENTS,
         payload: comments
     });
 
-    export const addLeaders = (leaders) => ({
+export const addLeaders = (leaders) => ({
         type: ActionTypes.ADD_LEADERS,
         payload: leaders
     });
 
-    export const dishesFailed = (errmess) => ({
+export const dishesFailed = (errmess) => ({
         type: ActionTypes.DISHES_FAILED,
         payload: errmess
     });
 
-    export const leadersFailed = (errmess) => ({
+export const leadersFailed = (errmess) => ({
         type: ActionTypes.LEADERS_FAILED,
         payload: errmess
     });
 
 
-    export const promosFailed = (errmess) => ({
+export const promosFailed = (errmess) => ({
         type: ActionTypes.PROMOS_FAILED,
         payload: errmess
     });
 
-    export const addDishes = (dishes) => ({
+export const addDishes = (dishes) => ({
         type: ActionTypes.ADD_DISHES,
         payload: dishes
     });
 
-    export const addPromos = (promos) => ({
+export const addPromos = (promos) => ({
         type: ActionTypes.ADD_PROMOS,
         payload: promos
     });
 
-    export const promosLoading = () => ({
+export const promosLoading = () => ({
         type: ActionTypes.PROMOS_LOADING
     });
 
-    export const leadersLoading = () => ({
+export const leadersLoading = () => ({
         type: ActionTypes.LEADERS_LOADING
     });
 
 
-    export const dishesLoading = () => ({
+export const dishesLoading = () => ({
         type: ActionTypes.DISHES_LOADING
     });
 
+export const postFavorite = (dishId) => (dispatch) => {
+    setTimeout(() =>{ dispatch(addFavorite(dishId));
+    }, 2000);
+} 
+
+export const addFavorite = (dishId) => ({
+    type: ActionTypes.ADD_FAVORITE,
+    payload: dishId
+})
     
 
