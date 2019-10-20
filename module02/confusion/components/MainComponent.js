@@ -13,7 +13,10 @@ import {fetchDishes, fetchComments, fetchPromos, fetchLeaders} from '../redux/Ac
 
 const mapStateToProps = state => {
     return {
-        
+        dishes: state.dishes,
+        comments: state.comments,
+        promotions: state.promotions,
+        leaders: state.leaders
     }
   }
 
@@ -23,6 +26,11 @@ const mapStateToProps = state => {
      fetchPromos: () => dispatch(fetchPromos()),
      fetchLeaders: () => dispatch(fetchLeaders()),
  }) 
+
+ 
+  
+
+
 
 const MenuNavigator = createStackNavigator({
     Menu: {screen: Menu, navigationOptions: ({ navigation}) => ({
